@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100;
+  background-color: #ffffff;
+}
+
+.imagemForca {
+  width: 400px;
+  height: 466px;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  padding: 59px 53px 0 38px;
+  width: 100%;
+}
+
+.conteiner-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.palavraSorteada {
+  width: 323px;
+  height: 68px;
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 68px;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  text-decoration: underline;
+  margin-right: 5px;
+}
+
+.letrasSorteadas {
+  margin-left: 80%;
+  list-style: none;
+
+}
+
+.palavraSorteadaCorreta {
+  color: green;
+}
+
+.palavraSorteadaErrada {
+  color: red;
+}
+
+.botao-principal {
+  width: 200px;
+  height: 60px;
+  background: #27ae60;
+  border-radius: 8px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 55px 289px;
+}
+
+.wrapped-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 70px;
+  gap: 12px;
+}
+
+/*botao desabilidado */
+.letras {
+  width: 40px;
+  height: 40px;
+  font-family: "roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #798a9f;
+  background: #9faab5;
+  border: 1px solid #7aa7c7;
+  border-radius: 3px;
+}
+
+/*botao habilitado */
+
+.letrasHabilitadas {
+  color: #39739d;
+  background: #e1ecf4;
+  border: 1px solid #7aa7c7;
+  border-radius: 3px;
+}
+
+.risco {
+  text-decoration: line-through;
+}
