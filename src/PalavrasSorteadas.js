@@ -1,17 +1,13 @@
 
 import palavras from "./palavras"
 
-function PalavrasSorteadas ({palavra, setPalavra, selecionada }){
+function  PalavrasSorteadas ({palavra, setPalavra, selecionada }){
 
     function paralavraRecebica(ls) {
       
         if(palavra.length === 0) {
             setPalavra(ls)
         }
-    }
-
-    function validacaoPalavra(){
-        
     }
 
 
@@ -21,7 +17,7 @@ function PalavrasSorteadas ({palavra, setPalavra, selecionada }){
     paralavraRecebica(letras);
 
     return (
-        <li className="letrasSorteadas">
+        <li data-test="word" className="letrasSorteadas">
            
             {palavra.map((letra, index)=>(
                     <span data-test="word" className="palavraSorteada" key={index}>

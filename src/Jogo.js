@@ -10,6 +10,8 @@ function Jogo (){
     const [click, setClick] = useState(false);
     const [palavra, setPalavra] = useState([]);
     const [selecionada, setSelecionada] = useState ([]);
+    const [erros, setErros] = useState(0);
+
 
 
 
@@ -17,14 +19,14 @@ function Jogo (){
     return (
         <div>
           <span className='conteiner-top'>
-        <ForcaImagens />
+        <ForcaImagens erros={erros}/>
         <BotaoInicial  setClick = {setClick}/>        
          </span>
 
         {click &&
         <PalavrasSorteadas palavra = {palavra}  setPalavra = {setPalavra} selecionada={selecionada} />
       }        
-        <Alfabeto palavra={palavra} click = {click}  selecionada ={selecionada} setSelecionada ={setSelecionada}
+        <Alfabeto palavra={palavra} click = {click} setClick={setClick} selecionada ={selecionada} setSelecionada ={setSelecionada} setErros={setErros} erros={erros}
 />
 
         </div>

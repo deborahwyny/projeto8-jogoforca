@@ -4,17 +4,14 @@ import palavras from "./palavras";
 
 const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-function Alfabeto ({palavra, click, setClick, selecionada, setSelecionada}){
+function Alfabeto ({palavra, click, setClick, selecionada, setSelecionada, erros, setErros}){
 
     const [escolhidas, setEscolhidos] = useState([]);
-    const [erros, setErros] = useState(0);
 
 
 
     function verificadorLetra (letra) {
-        console.log('letra',letra)
-        console.log('palavra',palavra)
-        console.log('include',palavra.includes(letra))
+        
         if(palavra && palavra.includes(letra) && !selecionada.includes(letra)){
             setSelecionada([...selecionada,letra])
             setEscolhidos([...escolhidas, letra])
@@ -35,7 +32,7 @@ function Alfabeto ({palavra, click, setClick, selecionada, setSelecionada}){
     return ( 
         <li className="wrapped-buttons">
             {alfabeto.map((letra)=> {
-                const isDisabled = !click || escolhidas.includes(letra);
+                const isDisabled = !click || escolhidas.includes(letra) || erros >= 6;
                 return (
                     <button data-test="letter" onClick={() => verificadorLetra(letra)} disabled={isDisabled} className={`letras ${click && !escolhidas.includes(letra) ? "letrasHabilitadas" : "letras"}`}>
                         {letra}
