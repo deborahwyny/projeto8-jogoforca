@@ -30,10 +30,10 @@ function Alfabeto ({palavra, click, setClick, selecionada, setSelecionada, erros
         console.log('p ', palavra)
         console.log('set ', new Set(palavra))
 
-        if(new Set(palavra).size == novaSelecao.length){
-            setClick(false)
-            setAcertou(true)
-        }
+        if(palavra && novaSelecao.every(letra => palavra.includes(letra))) {
+            setClick(false);
+            setAcertou(true);
+          }
         
     }
 
