@@ -10,7 +10,7 @@ function ForcaImagens ({erros}){
 
         <div className="top">
              
-            <img className="imagemForca" src={imagens[erros]} alt="Forca" />
+            <img data-test="game-image" className="imagemForca" src={imagens[erros]} alt="Forca" />
         
             </div>
 

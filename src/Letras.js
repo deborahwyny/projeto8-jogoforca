@@ -10,6 +10,7 @@ function Alfabeto ({palavra, click, setClick, selecionada, setSelecionada, erros
 
 
 
+
     function verificadorLetra (letra) {
         
         if(palavra && palavra.includes(letra) && !selecionada.includes(letra)){
