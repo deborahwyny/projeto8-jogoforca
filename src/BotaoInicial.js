@@ -1,11 +1,16 @@
 import { useState } from "react";
 
-function BotaoInicial ({setClick}) {
+function BotaoInicial ({setClick, setPalavra, setAcertou, setErros, setSelecionada}) {
 
 
 
     function clicouBotao () {
         setClick(true);
+        setPalavra([]);
+        setAcertou(false);
+        setErros(0);
+        setSelecionada([])
+
     }
 
     return (

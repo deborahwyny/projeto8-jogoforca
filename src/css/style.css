@@ -46,12 +46,14 @@
 
 }
 
-.palavraSorteadaCorreta {
+ .correta {
   color: green;
+  
 }
 
-.palavraSorteadaErrada {
+ .errada{
   color: red;
+  
 }
 
 .botao-principal {
