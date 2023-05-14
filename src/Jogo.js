@@ -18,6 +18,7 @@ function Jogo (){
 
 
 
+
     return (
         <div>
           <span className='conteiner-top'>
@@ -28,7 +29,7 @@ function Jogo (){
         {(click || acertou) &&
         <PalavrasSorteadas palavra = {palavra}  setPalavra = {setPalavra} selecionada={selecionada} acertou ={acertou} erros={erros}/>
       }        
-        <Alfabeto palavra={palavra} click = {click} setClick={setClick} selecionada ={selecionada} setSelecionada ={setSelecionada} setErros={setErros} erros={erros} setAcertou ={setAcertou} 
+        <Alfabeto palavra={palavra} click = {click} setClick={setClick} selecionada ={selecionada} setSelecionada ={setSelecionada} setErros={setErros} erros={erros} setAcertou ={setAcertou} acertou={acertou}
 />
 
         </div>

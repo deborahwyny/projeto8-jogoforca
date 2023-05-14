@@ -4,7 +4,7 @@ import palavras from "./palavras";
 
 const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-function Alfabeto ({palavra, click, setClick, selecionada, setSelecionada, erros, setErros, setAcertou}){
+function Alfabeto ({palavra, click, setClick, selecionada, setSelecionada, erros, setErros, setAcertou, acertou }){
 
     const [escolhidas, setEscolhidos] = useState([]);
 
@@ -44,13 +44,15 @@ function Alfabeto ({palavra, click, setClick, selecionada, setSelecionada, erros
     return ( 
         <li className="wrapped-buttons">
             {alfabeto.map((letra)=> {
-                const isDisabled = !click || escolhidas.includes(letra) || erros >= 6;
+                const isDisabled = !click || escolhidas.includes(letra) || erros >= 6 || acertou;
                 return (
                     <button data-test="letter" onClick={() => verificadorLetra(letra)} disabled={isDisabled} className={`letras ${click && !escolhidas.includes(letra) ? "letrasHabilitadas" : "letras"}`}>
                         {letra}
                     </button>
                 )
             })}
+
+            
         </li>        
     )
 }

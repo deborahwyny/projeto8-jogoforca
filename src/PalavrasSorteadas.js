@@ -17,9 +17,11 @@ function  PalavrasSorteadas ({palavra, setPalavra, selecionada, acertou, erros})
     const geradorPalavras = Math.floor(Math.random() * palavras.length);
     const letras = palavras[geradorPalavras].split('');
     paralavraRecebica(letras);
+    
 
     return (
         <li data-test="word" className="letrasSorteadas ">
+
            
             {palavra.map((letra, index)=>(
                     <span data-test="word" className={`palavraSorteada ${acertou ? "correta": ""} ${erros >= 6 ? "errada": ""}` }key={index}>
