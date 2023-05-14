@@ -18,7 +18,6 @@ function Alfabeto ({palavra, click, setClick, selecionada, setSelecionada, erros
         if(palavra && palavra.includes(letra) && !selecionada.includes(letra)){
             setSelecionada(novaSelecao)
             setEscolhidos([...escolhidas, letra])
-            console.log('s ',selecionada)
         }else  {
             setEscolhidos([...escolhidas, letra])
             setErros(erros + 1)
@@ -28,8 +27,7 @@ function Alfabeto ({palavra, click, setClick, selecionada, setSelecionada, erros
             setClick(false);
             setEscolhidos([])
         } 
-        console.log('p ', palavra)
-        console.log('set ', new Set(palavra))
+       
 
         if(new Set(palavra).size == novaSelecao.length){
             setClick(false)

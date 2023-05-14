@@ -32,7 +32,6 @@ function  PalavrasSorteadas ({palavra, setPalavra, selecionada, acertou, erros})
               </span>
             );
           })}
-          <p>{erros}</p>
         </li>
       );
         }
