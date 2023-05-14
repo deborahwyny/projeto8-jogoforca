@@ -23,10 +23,10 @@ function Jogo (){
         <div>
           <span className='conteiner-top'>
         <ForcaImagens erros={erros} />
-        <BotaoInicial  setClick = {setClick} />        
+        <BotaoInicial  setClick = {setClick} setPalavra={setPalavra} setErros={setErros} setAcertou={setAcertou} setSelecionada={setSelecionada}/>        
          </span>
 
-        {(click || acertou) &&
+        {(click || acertou || erros >= 6) &&
         <PalavrasSorteadas palavra = {palavra}  setPalavra = {setPalavra} selecionada={selecionada} acertou ={acertou} erros={erros}/>
       }        
         <Alfabeto palavra={palavra} click = {click} setClick={setClick} selecionada ={selecionada} setSelecionada ={setSelecionada} setErros={setErros} erros={erros} setAcertou ={setAcertou} acertou={acertou}

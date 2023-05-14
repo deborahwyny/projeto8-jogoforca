@@ -26,14 +26,17 @@ function Alfabeto ({palavra, click, setClick, selecionada, setSelecionada, erros
         
         if (erros + 1 >= 6) {
             setClick(false);
+            setEscolhidos([])
         } 
         console.log('p ', palavra)
         console.log('set ', new Set(palavra))
 
-        if(palavra && novaSelecao.every(letra => palavra.includes(letra))) {
-            setClick(false);
-            setAcertou(true);
-          }
+        if(new Set(palavra).size == novaSelecao.length){
+            setClick(false)
+            setAcertou(true)
+            setEscolhidos([])
+
+        }
         
     }
 

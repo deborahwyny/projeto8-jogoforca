@@ -20,23 +20,22 @@ function  PalavrasSorteadas ({palavra, setPalavra, selecionada, acertou, erros})
     
 
     return (
-        <li data-test="word" className="letrasSorteadas ">
-
-           
-            {palavra.map((letra, index)=>(
-                    <span data-test="word" className={`palavraSorteada ${acertou ? "correta": ""} ${erros >= 6 ? "errada": ""}` }key={index}>
-                        {selecionada.includes(letra) ? letra : '_'}
-                    </span>
-                    
-            ))}
-            
-            <p>{erros}</p>
-
+        <li data-test="word" className="letrasSorteadas">
+          {palavra.map((letra, index) => {
+            return erros >= 6 ? (
+              <span className="palavraSorteada errada"key={index}>
+                {letra}
+              </span>
+            ) : (
+              <span className={`palavraSorteada ${acertou ? "correta" : ""}`} key={index}>
+                {selecionada.includes(letra) ? letra : '_'}
+              </span>
+            );
+          })}
+          <p>{erros}</p>
         </li>
-
-
-    )
-}
+      );
+        }
 
 
 export default PalavrasSorteadas;
