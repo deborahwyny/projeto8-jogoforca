@@ -23,7 +23,7 @@ function Jogo (){
         <div>
           <span className='conteiner-top'>
         <ForcaImagens erros={erros} />
-        <BotaoInicial  setClick = {setClick} setPalavra = {setPalavra}  setErros={setErros} setAcertou={setAcertou} setSelecionada={setSelecionada}/>        
+        <BotaoInicial  setClick = {setClick} />        
          </span>
 
         {(click || acertou) &&

@@ -1,18 +1,16 @@
 import { useState } from "react";
 
-function BotaoInicial ({setClick, setPalavra, setAcertou, setErros, setSelecionada, setEscolhidos}) {
+function BotaoInicial ({setClick, setPalavra, setAcertou, setErros, setSelecionada}) {
 
 
 
-    function clicouBotao () {
+     function clicouBotao () {
         setClick(true);
-        setPalavra([]);
-        setAcertou(false);
-        setErros(0);
-        setSelecionada([]);
-        setEscolhidos([])
+    //     setPalavra([]);
+    //     setAcertou(false);
+    //     setErros(0);
 
-    }
+     }
 
     return (
         <span className="">
